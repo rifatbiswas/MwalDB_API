@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
@@ -10,6 +8,7 @@ const Item = ({ data }) => {
     <>
       {!data
         ? "Not Found"
+        // eslint-disable-next-line react/prop-types
         : data.map((item) => (
             <div key={item.id} className="w-[200px] rounded-lg bg-black p-2" onClick={()=>{navigate(`/${item.idMeal}`)}}>
               <img
